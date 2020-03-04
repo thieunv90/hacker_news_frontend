@@ -1,0 +1,62 @@
+.main-content {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.masonry-item {
+  width: 350px;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+    height: 100%;
+    min-height: 190px;
+  }
+}
+
+.card-wrapper {
+  margin: 8px;
+}
+
+ngx-masonry {
+  margin: 0 auto;
+  a {
+    text-decoration: none;
+  }
+}
+
+.more-post-button {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.no-post {
+  text-align: center;
+  margin: 20px 0;
+}
+
+mat-card {
+  mat-card-title {
+    line-height: 1.3em;
+    text-align: left;
+    margin: 0 -16px 10px -16px;
+  }
+}
+
+.post-site-name {
+  text-align: left;
+  margin: 0 -16px 10px -16px;
+}
+
+.spinner-overlay {
+  border-radius: 10px;
+  height: 70px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 70px;
+  z-index: 3;
+  opacity: 0.5;
+}

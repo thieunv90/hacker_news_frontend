@@ -1,0 +1,44 @@
+mat-toolbar {
+  position: fixed;
+  z-index: 100;
+  width: 100%  !important;
+  a {
+    font-size: 20px;
+    text-decoration: none;
+  }
+}
+.post-content-wrapper {
+  padding-top: 100px;
+  padding-bottom: 20px;
+
+  img.post-cover {
+    height: 65vh;
+    max-height: 500px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  h1.post-title {
+    padding-top: 20px;
+    font-size: 2em;
+  }
+
+  .post-description {
+    font-size: 16px;
+    color: #989aa2;
+    line-height: 1.8;
+    margin: 15px 0 25px;
+  }
+
+  .post-content {
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+
+  .post-source {
+    font-size: 14px;
+    text-align: right;
+  }
+}

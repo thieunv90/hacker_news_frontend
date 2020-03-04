@@ -1,0 +1,19 @@
+<header>
+  <mat-toolbar>
+    <a mat-button routerLink="." (click)="goBack()">
+      < Back
+    </a>
+  </mat-toolbar>
+</header>
+<div class="container wrapper">
+  <div class='post-content-wrapper' *ngIf="post">
+    <img class="post-cover" src="{{ post.cover_image }}" alt="{{ post.title }}">
+    <h1 class="post-title">{{ post.title }}</h1>
+    <p class="post-description">{{ post.description }}</p>
+
+    <div class="post-content" [innerHTML]="post.content">
+    </div>
+
+    <div class="post-source">(Source: <a target="_blank" href="{{ url }}">{{ url }}</a>)</div>
+  </div>
+</div>
