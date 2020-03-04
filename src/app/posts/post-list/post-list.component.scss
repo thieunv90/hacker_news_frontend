@@ -17,6 +17,9 @@
 
 .card-wrapper {
   margin: 8px;
+  &:hover, &:active {
+    box-shadow: 0 1px 3px 1px rgba(60,64,67,.2), 0 2px 8px 4px rgba(60,64,67,.1);
+  }
 }
 
 ngx-masonry {
