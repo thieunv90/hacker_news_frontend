@@ -7,7 +7,7 @@
             <mat-card-title>{{ post.title }}</mat-card-title>
             <mat-card-subtitle class="post-site-name">{{ post.site_name }}</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image src="{{ post.cover_image }}" alt="{{ post.title }}">
+          <img mat-card-image src="{{ post.cover_image || '/assets/images/null-image.png' }}" alt="{{ post.title }}">
           <mat-card-content>
           </mat-card-content>
           <mat-card-actions>
