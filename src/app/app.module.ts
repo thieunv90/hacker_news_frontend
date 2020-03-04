@@ -11,10 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxMasonryModule } from 'ngx-masonry';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CoreModule } from './core';
-import { CommonModule } from '@angular/common';
-import { OverlayModule } from '@angular/cdk/overlay';
 
 // Services
 import { PostService } from './posts/shared/post.service';
@@ -31,7 +28,6 @@ import { PostComponent } from './posts/post/post.component';
   ],
   imports: [
     BrowserModule,
-    CommonModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -39,9 +35,7 @@ import { PostComponent } from './posts/post/post.component';
     MatCardModule,
     MatButtonModule,
     NgxMasonryModule,
-    MatProgressSpinnerModule,
-    CoreModule,
-    OverlayModule
+    CoreModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]

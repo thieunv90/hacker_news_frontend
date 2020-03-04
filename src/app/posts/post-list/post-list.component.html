@@ -18,7 +18,7 @@
     </div>
   </ngx-masonry>
   <div class="more-post-button">
-    <button mat-stroked-button disabled="{{ isProcessing }}" (click)="showMorePosts(nextPage)" *ngIf="hasNewPosts">Load more posts...</button>
+    <button mat-stroked-button disabled="{{ this.loaderService.isLoading | async }}" (click)="showMorePosts(nextPage)" *ngIf="hasNewPosts">Load more posts...</button>
   </div>
   <h2 *ngIf="hasNoPosts" class="no-post">No more posts</h2>
 </div>

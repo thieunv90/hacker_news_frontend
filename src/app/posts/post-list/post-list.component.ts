@@ -14,7 +14,6 @@ export class PostListComponent implements OnInit {
   nextPage: number;
   hasNewPosts: boolean = false;
   hasNoPosts: boolean = false;
-  isProcessing: boolean = false;
   color = 'primary';
   mode = 'indeterminate';
   value = 50;
@@ -42,12 +41,10 @@ export class PostListComponent implements OnInit {
         this.hasNewPosts = false;
         this.hasNoPosts = true;
       }
-      this.isProcessing = false;
     })
   }
 
   showMorePosts(page: number) {
-    this.isProcessing = true;
     this.fetchPosts(page);
   }
 }
