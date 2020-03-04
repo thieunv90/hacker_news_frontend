@@ -8,12 +8,16 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { LoaderService } from './loader.service';
+import { SpinnerService } from '@accubits/spinner';
 
 @Injectable()
 export class LoaderInterceptor implements HttpInterceptor {
   private requests: HttpRequest<any>[] = [];
 
-  constructor(private loaderService: LoaderService) { }
+  constructor(
+    private loaderService: LoaderService,
+    private spinner: SpinnerService
+  ) { }
 
   removeRequest(req: HttpRequest<any>) {
     const i = this.requests.indexOf(req);
@@ -21,11 +25,18 @@ export class LoaderInterceptor implements HttpInterceptor {
       this.requests.splice(i, 1);
     }
     this.loaderService.isLoading.next(this.requests.length > 0);
+
+    if(this.requests.length > 0) {
+      this.spinner.show();
+    } else {
+      this.spinner.hide();
+    }
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     this.requests.push(req);
     this.loaderService.isLoading.next(true);
+    this.spinner.show();
     return Observable.create(observer => {
       const subscription = next.handle(req)
         .subscribe(

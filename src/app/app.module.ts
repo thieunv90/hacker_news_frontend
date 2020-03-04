@@ -11,7 +11,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxMasonryModule } from 'ngx-masonry';
-import { CoreModule } from './core';
+import { LoaderModule } from './loader';
+import { SpinnerModule } from '@accubits/spinner';
 
 // Services
 import { PostService } from './posts/shared/post.service';
@@ -35,7 +36,8 @@ import { PostComponent } from './posts/post/post.component';
     MatCardModule,
     MatButtonModule,
     NgxMasonryModule,
-    CoreModule
+    LoaderModule,
+    SpinnerModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]

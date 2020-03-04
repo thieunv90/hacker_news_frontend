@@ -14,7 +14,5 @@ import { LoaderInterceptor } from './loader.interceptor';
   ]
 })
 
-export class CoreModule {
-}
-
+export class LoaderModule {}
 export * from './loader.service';

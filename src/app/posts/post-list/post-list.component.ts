@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../shared/post.service';
-import { LoaderService } from '../../core/loader.service';
+import { LoaderService } from '../../loader/loader.service';
 
 @Component({
   selector: 'app-post-list',
@@ -9,14 +9,10 @@ import { LoaderService } from '../../core/loader.service';
 })
 export class PostListComponent implements OnInit {
   posts: any = [];
-  showSpinner: boolean;
   currentPage: number = 1;
   nextPage: number;
   hasNewPosts: boolean = false;
   hasNoPosts: boolean = false;
-  color = 'primary';
-  mode = 'indeterminate';
-  value = 50;
 
   constructor(
     public postService: PostService,
